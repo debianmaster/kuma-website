@@ -1,5 +1,5 @@
 ---
-title: Blue-green Deployment with Kuma
+title: Blue-green Deployment with Kuma in Standalone
 content_type: tutorial
 ---
 
@@ -7,13 +7,9 @@ This tutorial will help you learn how to set up a blue-green deployment for your
 
 Tutorials should include an introduction paragraph here. Good introductions explain who this tutorial is for and what this tutorial will help the user accomplish and learn. For example, if you were writing a tutorial about how to get started with a software product, your tutorial could include information about a general overview of what steps the user would be going through, what this software will help them accomplish, and that the end result of this tutorial will be that the software is installed with the basic settings configured. 
 
-## Prerequisites <!-- Optional -->
+## Prerequisites
 
-Tutorial topics typically don't contain any prerequisites because you should be helping the user install those things in the steps. The only prerequisites you should include are those for external tools, like jq or Docker, for example. 
-
-In the rare circumstance that you need prerequisites, write them as a bulleted list.
-
-* Docker installed
+* [`kumactl` installed](/docs/{{ page.version }}/production/install-kumactl/)
 * jq installed
 
 ## Task section <!-- Header optional if there's only one task section in the article -->

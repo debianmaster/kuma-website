@@ -1,5 +1,5 @@
 ---
-title: Canary Deployment with Kuma
+title: Canary Deployment with Kuma in Standalone
 content_type: tutorial
 ---
 
@@ -7,14 +7,10 @@ Tutorials are docs that help users learn by doing. The goal of a tutorial is to 
 
 Tutorials should include an introduction paragraph here. Good introductions explain who this tutorial is for and what this tutorial will help the user accomplish and learn. For example, if you were writing a tutorial about how to get started with a software product, your tutorial could include information about a general overview of what steps the user would be going through, what this software will help them accomplish, and that the end result of this tutorial will be that the software is installed with the basic settings configured. 
 
-## Prerequisites <!-- Optional -->
+## Prerequisites
 
-Tutorial topics typically don't contain any prerequisites because you should be helping the user install those things in the steps. The only prerequisites you should include are those for external tools, like jq or Docker, for example. 
-
-In the rare circumstance that you need prerequisites, write them as a bulleted list.
-
-* Docker installed
-* jq installed
+* [`kumactl` installed](/docs/{{ page.version }}/production/install-kumactl/)
+* 
 
 ## Task section <!-- Header optional if there's only one task section in the article -->
 
@@ -24,16 +20,10 @@ Each task section should include an introduction paragraph that explains what st
 
 ### Instructions
 
-Steps in each section should break down the tasks the user will complete in sequential order.
-
-Continuing the previous example of installing software, here's an example:
-
-1. On your computer, open Terminal.
-1. Install ____ with Terminal:
+1. Install Flagger for {{site.service_mesh_name}}:
     ```sh
-    example code
+    kustomize build https://github.com/fluxcd/kuma/kustomize/osm?ref=main | kubectl apply -f -
     ```
-    Explanation of the variables used in the sample code, like "Where `example` is the filename."
 1. Optional: To also install ____ to manage documents, install it using Terminal:
     ```sh
     example code

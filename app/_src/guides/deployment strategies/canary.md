@@ -7,11 +7,6 @@ Tutorials are docs that help users learn by doing. The goal of a tutorial is to 
 
 Tutorials should include an introduction paragraph here. Good introductions explain who this tutorial is for and what this tutorial will help the user accomplish and learn. For example, if you were writing a tutorial about how to get started with a software product, your tutorial could include information about a general overview of what steps the user would be going through, what this software will help them accomplish, and that the end result of this tutorial will be that the software is installed with the basic settings configured. 
 
-## Prerequisites
-
-* [`kumactl` installed](/docs/{{ page.version }}/production/install-kumactl/)
-* 
-
 ## Task section <!-- Header optional if there's only one task section in the article -->
 
 A tutorial section title directs the user to perform an action and generally starts with a verb. For example, "Install the software" or "Configure basic settings".
@@ -19,6 +14,23 @@ A tutorial section title directs the user to perform an action and generally sta
 Each task section should include an introduction paragraph that explains what step the user doing, a brief explanation of the feature, and why the user is completing this step.
 
 ### Instructions
+
+1. Install `kumactl`:
+    ```sh
+    curl -L https://kuma.io/installer.sh | sh -
+    ```
+
+1. Add the `kumactl` executable to your path.
+
+1. Deploy the control plane:
+    ```sh
+    kumactl install control-plane --license-path=license.json | kubectl apply -f -
+    ```
+
+1. Configure observability with Prometheus:
+    ```sh
+    kumactl install observability --namespace=kuma-metrics | kubectl apply   -f -
+    ```
 
 1. Install Flagger for {{site.service_mesh_name}}:
     ```sh

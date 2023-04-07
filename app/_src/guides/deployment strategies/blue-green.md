@@ -7,11 +7,6 @@ This tutorial will help you learn how to set up a blue-green deployment for your
 
 Tutorials should include an introduction paragraph here. Good introductions explain who this tutorial is for and what this tutorial will help the user accomplish and learn. For example, if you were writing a tutorial about how to get started with a software product, your tutorial could include information about a general overview of what steps the user would be going through, what this software will help them accomplish, and that the end result of this tutorial will be that the software is installed with the basic settings configured. 
 
-## Prerequisites
-
-* [`kumactl` installed](/docs/{{ page.version }}/production/install-kumactl/)
-* jq installed
-
 ## Task section <!-- Header optional if there's only one task section in the article -->
 
 A tutorial section title directs the user to perform an action and generally starts with a verb. For example, "Install the software" or "Configure basic settings".
@@ -24,31 +19,22 @@ Steps in each section should break down the tasks the user will complete in sequ
 
 Continuing the previous example of installing software, here's an example:
 
-1. On your computer, open Terminal.
-1. Install ____ with Terminal:
+1. Install `kumactl`:
     ```sh
-    example code
+    curl -L https://kuma.io/installer.sh | sh -
     ```
-    Explanation of the variables used in the sample code, like "Where `example` is the filename."
-1. Optional: To also install ____ to manage documents, install it using Terminal:
+
+1. Add the `kumactl` executable to your path.
+
+1. Deploy the control plane:
     ```sh
-    example code
+    kumactl install control-plane --license-path=license.json | kubectl apply -f -
     ```
-    Explanation of the variables used in the sample code, like "Where `example` is the filename."
-1. To ______, do the following:
-    1. Click **Start**.
-    1. Click **Stop**.
-1. To ____, do one of the following:
-    * If you are using Kubernetes, start the software:
-        ```sh
-        example code
-        ```
-        Explanation of the variables used in the sample code, like "Where `example` is the filename."
-    * If you are using Docker, start the software:
-        ```sh
-        example code
-        ```
-        Explanation of the variables used in the sample code, like "Where `example` is the filename."
+
+1. Configure observability with Prometheus:
+    ```sh
+    kumactl install observability --namespace=kuma-metrics | kubectl apply   -f -
+    ```
 
 You can also use tabs in a section. For example, if you can install the software with macOS or Docker, you might have a tab with instructions for macOS and a tab with instructions for Docker.
 

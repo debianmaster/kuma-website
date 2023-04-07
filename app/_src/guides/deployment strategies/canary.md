@@ -1,11 +1,9 @@
 ---
-title: Canary Deployment with Kuma in Standalone
+title: Basic Canary Deployment with Kuma in Standalone Mode
 content_type: tutorial
 ---
 
-Tutorials are docs that help users learn by doing. The goal of a tutorial is to guide the user, step-by-step through a series of tasks that help them achieve a certain goal. Keep in mind that the goal and the steps should be achievable even for a beginner. 
-
-Tutorials should include an introduction paragraph here. Good introductions explain who this tutorial is for and what this tutorial will help the user accomplish and learn. For example, if you were writing a tutorial about how to get started with a software product, your tutorial could include information about a general overview of what steps the user would be going through, what this software will help them accomplish, and that the end result of this tutorial will be that the software is installed with the basic settings configured. 
+Flagger is.... Using Flagger, you can...  
 
 ## Task section <!-- Header optional if there's only one task section in the article -->
 

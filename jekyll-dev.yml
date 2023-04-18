@@ -64,6 +64,9 @@ jekyll-generator-single-source:
   layout: 'page'
   multiple_products: false
   base_dest_path: 'docs'
+jekyll-kuma-plugins:
+  tabs:
+    template: _plugins/tabs.erb
 
 # Product name variables
 mesh_product_name: Kuma
